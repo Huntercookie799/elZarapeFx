@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="543.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.utl.dsm403.zarape.elzarape.controller.MainViewController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="543.0" prefWidth="194.0" spacing="10" style="-fx-background-color: #FA4032;">
+         <padding>
+            <Insets bottom="20" left="10" right="10" top="20" />
+         </padding>
+
+         <Label prefHeight="57.0" prefWidth="169.0" style="-fx-text-fill: #FEF3E2;" text="El Zarape">
+            <font>
+               <Font name="League Spartan Bold" size="37.0" />
+            </font>
+         </Label>
+
+         <Button fx:id="btnEmpleados" maxWidth="Infinity" onAction="#onEmpleadosButtonClick" prefHeight="54.0" prefWidth="174.0" style="-fx-background-color: #FAAF08; -fx-text-fill: #FEF3E2;" text="Empleados" />
+
+         <Button fx:id="btnSucursales" maxWidth="Infinity" onAction="#onSucursalesButtonClick" prefHeight="56.0" prefWidth="174.0" style="-fx-background-color: #FAAF08; -fx-text-fill: #FEF3E2;" text="Sucursales" />
+
+         <Button fx:id="btnArticulos" maxWidth="Infinity" onAction="#onArticulosButtonClick" prefHeight="54.0" prefWidth="174.0" style="-fx-background-color: #FAAF08; -fx-text-fill: #FEF3E2;" text="Artículos" />
+
+         <Button fx:id="btnCombos" maxWidth="Infinity" onAction="#onCombosButtonClick" prefHeight="57.0" prefWidth="174.0" style="-fx-background-color: #FAAF08; -fx-text-fill: #FEF3E2;" text="Combos" />
+         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../imagenes/TRANS.png" />
+            </image>
+         </ImageView>
+         
+         <Button onAction="#onLogoutButtonClick" prefHeight="48.0" prefWidth="168.0" style="-fx-background-color: #E74C3C;-fx-text-fill: white;" text="Cerrar Sesión" />
+      </VBox>
+      <AnchorPane fx:id="panelPrincipal" layoutX="194.0" prefHeight="543.0" prefWidth="575.0" />
+   </children>
+</AnchorPane>

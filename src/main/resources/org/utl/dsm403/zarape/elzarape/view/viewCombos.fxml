@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="543.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/22" 
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.utl.dsm403.zarape.elzarape.controller.CombosController">
+    <children>
+        <VBox spacing="10" prefHeight="543.0" prefWidth="575.0">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <Label text="Combos" style="-fx-text-fill: #FA4032;">
+                <font>
+                    <Font name="League Spartan Bold" size="32.0" />
+                </font>
+            </Label>
+
+            <Button prefHeight="40.0" prefWidth="40.0" 
+                    style="-fx-background-color: #FAAF08; -fx-text-fill: #FEF3E2;"
+                    text="+"
+                    onAction="#onNuevoComboClick"/>
+
+            <TableView fx:id="tablaCombos" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200"/>
+                    <TableColumn fx:id="colTotal" text="Total" prefWidth="100"/>
+                    <TableColumn fx:id="colAcciones" text="Acciones" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane> 

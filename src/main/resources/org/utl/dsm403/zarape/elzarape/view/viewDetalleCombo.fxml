@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.utl.dsm403.zarape.elzarape.controller.DetalleComboController">
+    <VBox spacing="10">
+        <padding>
+            <Insets bottom="20" left="20" right="20" top="20" />
+        </padding>
+
+        <Label style="-fx-text-fill: #FA4032;" text="Detalles del Combo">
+            <font>
+                <Font name="League Spartan Bold" size="24.0" />
+            </font>
+        </Label>
+    
+        <HBox spacing="10">
+           <Button onAction="#onAgregarProductoClick" prefHeight="11.0" prefWidth="88.0" style="-fx-background-color: #FAAF08; -fx-text-fill: #FEF3E2;" text="Nuevo" />
+            <Button onAction="#onCancelarClick" style="-fx-background-color: #E74C3C; -fx-text-fill: #FEF3E2;" text="Cancelar" />
+            <Button onAction="#onGuardarClick" style="-fx-background-color: #FAAF08; -fx-text-fill: #FEF3E2;" text="Guardar" />
+        </HBox>
+
+        <Label text="Nombre:" />
+        <TextField fx:id="txtNombre" />
+        
+        <Label text="Productos" />
+    
+        <TableView fx:id="tablaProductos" prefHeight="169.0" prefWidth="452.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colIdProducto" prefWidth="50" text="ID" />
+                <TableColumn fx:id="colNombreProducto" prefWidth="200" text="Producto" />
+                <TableColumn fx:id="colPrecio" prefWidth="100" text="Precio" />
+                <TableColumn fx:id="colAccionesProducto" prefWidth="100" text="Acciones" />
+            </columns>
+        </TableView>
+        
+        <Label text="Total:" />
+        <TextField fx:id="txtTotal" editable="false" />
+    </VBox>
+</AnchorPane>
