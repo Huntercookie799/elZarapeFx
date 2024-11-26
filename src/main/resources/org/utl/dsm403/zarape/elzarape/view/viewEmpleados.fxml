@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.utl.dsm403.zarape.elzarape.controller.EmpleadosController">
-    <VBox spacing="10">
+    <VBox prefHeight="535.0" prefWidth="858.0" spacing="10">
         <padding>
             <Insets bottom="20" left="20" right="20" top="20" />
         </padding>
@@ -21,14 +21,18 @@
             </font>
         </Label>
 
-        <Button prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: #FAAF08; -fx-text-fill: #FEF3E2;" text="+" />
+        <Button prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: #FAAF08; -fx-text-fill: #FEF3E2;" text="+" onAction="#abrirVentanaAgregar" />
 
-        <TableView fx:id="tablaEmpleados" VBox.vgrow="ALWAYS">
+        <TableView fx:id="tablaEmpleados" prefHeight="400.0" prefWidth="781.0" VBox.vgrow="ALWAYS">
             <columns>
                 <TableColumn fx:id="colIdEmpleado" prefWidth="50" text="ID" />
-                <TableColumn fx:id="colNombreEmpleado" prefWidth="200" text="Nombre" />
-                <TableColumn fx:id="colPuesto" prefWidth="150" text="Puesto" />
-                <TableColumn fx:id="colAcciones" prefWidth="100" text="Acciones" />
+                <TableColumn fx:id="colNombreEmpleado" prefWidth="112.0" text="Nombre" />
+                <TableColumn fx:id="colApellidosEmpleado" prefWidth="111.0" text="Apellidos" />
+                <TableColumn fx:id="colTelefonoEmpleado" prefWidth="97.0" text="Teléfono" />
+                <TableColumn fx:id="colSucursal" prefWidth="94.0" text="Sucursal" />
+                <TableColumn fx:id="colUsuario" prefWidth="103.0" text="Usuario" />
+                <TableColumn fx:id="colActivo" prefWidth="90.0" text="Activo" />
+                <TableColumn fx:id="colAcciones" prefWidth="160.0" text="Acciones" />
             </columns>
         </TableView>
     </VBox>

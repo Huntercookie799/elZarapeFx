@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="543.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.utl.dsm403.zarape.elzarape.controller.MainViewController">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="543.0" prefWidth="194.0" spacing="10" style="-fx-background-color: #FA4032;">
+      <VBox alignment="TOP_CENTER" prefHeight="543.0" prefWidth="200.0" spacing="10" style="-fx-background-color: #FA4032;">
          <padding>
             <Insets bottom="20" left="10" right="10" top="20" />
          </padding>
@@ -37,6 +37,6 @@
          
          <Button onAction="#onLogoutButtonClick" prefHeight="48.0" prefWidth="168.0" style="-fx-background-color: #E74C3C;-fx-text-fill: white;" text="Cerrar Sesión" />
       </VBox>
-      <AnchorPane fx:id="panelPrincipal" layoutX="194.0" prefHeight="543.0" prefWidth="575.0" />
+      <AnchorPane fx:id="panelPrincipal" layoutX="200.0" prefHeight="543.0" prefWidth="856.0" />
    </children>
 </AnchorPane>

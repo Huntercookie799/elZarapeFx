@@ -48,6 +48,10 @@ public class Funciones {
                 Stage ventana = (Stage)((Node)evento.getSource()).getScene().getWindow();
                 ventana.setTitle(titulo);
                 ventana.setScene(escena);
+                
+                // Centrar la ventana
+                ventana.centerOnScreen();
+                
                 ventana.show();
             } catch (IOException e) {
                 Alertas.mostrarError("Error", "No se pudo cargar la vista: " + e.getMessage());
@@ -63,12 +67,10 @@ public class Funciones {
             try {
                 FXMLLoader cargador = new FXMLLoader(Navegacion.class.getResource(rutaFXML));
                 Node vista = cargador.load();
-                
-                // Limpiar el panel y agregar la nueva vista
+
                 panel.getChildren().clear();
                 panel.getChildren().add(vista);
-                
-                // Ajustar la vista para que ocupe todo el espacio
+
                 AnchorPane.setTopAnchor(vista, 0.0);
                 AnchorPane.setRightAnchor(vista, 0.0);
                 AnchorPane.setBottomAnchor(vista, 0.0);
@@ -87,6 +89,10 @@ public class Funciones {
                 ventanaModal.setTitle(titulo);
                 ventanaModal.setScene(escena);
                 ventanaModal.initModality(Modality.APPLICATION_MODAL); // Hace que la ventana sea modal
+                
+                // Centrar la ventana modal
+                ventanaModal.centerOnScreen();
+                
                 ventanaModal.showAndWait();
             } catch (IOException e) {
                 Alertas.mostrarError("Error", "No se pudo cargar la vista: " + e.getMessage());
